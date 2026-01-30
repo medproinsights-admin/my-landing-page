@@ -101,8 +101,9 @@ Has Website: ${formData.hasWebsite}
 Type: ${formData.websiteType}`;
     
     // Replace YOUR_PHONE_NUMBER_HERE with actual number for production
-    const whatsappUrl = `https://wa.me/YOUR_PHONE_NUMBER_HERE?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const customMsg = "Hello, I would like to get my free quote on WhatsApp";
+const whatsappUrl = `https://wa.me/919980884031?text=${encodeURIComponent(customMsg)}`;
+window.open(whatsappUrl, '_blank');
   };
 
   const faqItems: FAQItem[] = [
