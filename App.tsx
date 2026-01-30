@@ -103,7 +103,11 @@ Type: ${formData.websiteType}`;
     // Replace YOUR_PHONE_NUMBER_HERE with actual number for production
     const customMsg = "Hello, I would like to get my free quote on WhatsApp";
 const whatsappUrl = `https://wa.me/919980884031?text=${encodeURIComponent(customMsg)}`;
-window.open(whatsappUrl, '_blank');
+
+// Delay WhatsApp by 500ms so HubSpot has time to process the data
+setTimeout(() => {
+  window.open(whatsappUrl, '_blank');
+}, 500);
   };
 
   const faqItems: FAQItem[] = [
